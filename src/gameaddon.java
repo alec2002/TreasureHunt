@@ -10,7 +10,7 @@ import javax.swing.JPanel;
 public class gameaddon implements ActionListener {
 	int x = 5;
 	JFrame frame;
-	JPanel panel;
+	JPanel panel2;
 	JButton b1;
 	JButton b2;
 	JButton b3;
@@ -37,7 +37,7 @@ public class gameaddon implements ActionListener {
 		frame.setVisible(true);
 
 		frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
-		panel = new JPanel();
+		panel2 = new JPanel();
 		b1 = new JButton("U");
 		b2 = new JButton("A");
 		b3 = new JButton("N");
@@ -55,22 +55,22 @@ public class gameaddon implements ActionListener {
 		b15 = new JButton("K");
 
 		//
-		frame.add(panel);
-		panel.add(b1);
-		panel.add(b2);
-		panel.add(b3);
-		panel.add(b4);
-		panel.add(b5);
-		panel.add(b6);
-		panel.add(b7);
-		panel.add(b8);
-		panel.add(b9);
-		panel.add(b10);
-		panel.add(b11);
-		panel.add(b12);
-		panel.add(b13);
-		panel.add(b14);
-		panel.add(b15);
+		frame.add(panel2);
+		panel2.add(b1);
+		panel2.add(b2);
+		panel2.add(b3);
+		panel2.add(b4);
+		panel2.add(b5);
+		panel2.add(b6);
+		panel2.add(b7);
+		panel2.add(b8);
+		panel2.add(b9);
+		panel2.add(b10);
+		panel2.add(b11);
+		panel2.add(b12);
+		panel2.add(b13);
+		panel2.add(b14);
+		panel2.add(b15);
 
 		frame.setSize(400, 400);
 		//
@@ -166,7 +166,11 @@ public class gameaddon implements ActionListener {
 				&& b9.getBackground() == Color.BLACK && b12.getBackground() == Color.BLACK
 				&& b15.getBackground() == Color.BLACK) {
 			JOptionPane.showMessageDialog(null,
-					"You may have figured out the code for my chest, but goodluck completing my maze, HAHAHAHA!!!!");
+					"You may have figured out the code for my chest, but goodluck completing my game, HAHAHAHA!!!!");
+
+			frame.dispose();
+			UnlockChest xx = new UnlockChest();
+
 		}
 
 	}

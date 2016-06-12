@@ -1,5 +1,6 @@
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionListener;
+import java.awt.image.BufferedImage;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -7,6 +8,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 public class PhotoBook implements MouseMotionListener {
+	BufferedImage backround;
 	JFrame frame;
 	JPanel panel;
 	JButton b1;
@@ -15,10 +17,10 @@ public class PhotoBook implements MouseMotionListener {
 	JButton b4;
 
 	sounds s = new sounds();
-	ImagePanel X = new ImagePanel("Treasure.jpeg", 230, 230);
+	backroundImage X = new backroundImage("Treasure.jpeg");
 
 	public static void main(String[] args) {
-		PhotoBook X = new PhotoBook();
+		PhotoBook d = new PhotoBook();
 	}
 
 	public PhotoBook() {
@@ -31,7 +33,7 @@ public class PhotoBook implements MouseMotionListener {
 		JOptionPane.showMessageDialog(null, "ok lad find thy docking device on here map");
 		frame = new JFrame();
 		frame.setVisible(true);
-		frame.setSize(250, 250);
+		frame.setSize(290, 340);
 		frame.setLayout(null);
 		X.setBounds(0, 0, 288, 300);
 
@@ -51,18 +53,20 @@ public class PhotoBook implements MouseMotionListener {
 	}
 
 	public void mouseMoved(MouseEvent arg0) {
-		if (arg0.getX() > 148 & arg0.getX() < 156 && arg0.getY() == 72 & arg0.getY() < 83) {
+
+		if (arg0.getX() > 251 & arg0.getX() < 263 && arg0.getY() == 106 & arg0.getY() < 111) {
 
 			s.playSound("waves.wav");
 			JOptionPane.showMessageDialog(null, "Good job lad, now find the place that marks me booty");
 		}
-		if (arg0.getX() > 93 & arg0.getX() < 97 && arg0.getY() > 144 & arg0.getY() < 150) {
+		if (arg0.getX() > 160 & arg0.getX() < 165 && arg0.getY() > 230 & arg0.getY() < 235) {
 			s.playSound("dddd.wav");
 			JOptionPane
 					.showMessageDialog(
 							null,
 							"Oh no, the ghost of Black Beard has appeared, remember the combination then click the correct combination or feel his wrath");
 			s.playSound("drama.wav");
+
 			gameaddon tt = new gameaddon();
 
 		}
